@@ -17,7 +17,7 @@ from langchain.chat_models import ChatOpenAI
 import os
 import gradio
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "Enter your API Key here"
 
 def create_index(directory_path):
   maximum_input = 4096
@@ -48,7 +48,7 @@ def query_function(Query):
   response = vIndex.query(query_prompt, response_mode="compact")
   return response
 
-vectorIndex = create_index("C:/Users/kotturi_ganesh/PycharmProjects/API_CHATBOT/TRANNING_DATA_SET")
+vectorIndex = create_index("Enter your dataset path here")
 
 #Creating the UI using Gradio Library
 interface = gradio.Interface(
